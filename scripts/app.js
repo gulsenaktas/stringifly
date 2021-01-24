@@ -5,6 +5,9 @@ const updateMssg = document.querySelector(".update-message");
 const rooms = document.querySelector(".chat-rooms")
 const buttons = document.querySelectorAll(".chat-rooms .btn")
 const chatWindow = document.querySelector(".chat-window")
+const general = document.querySelector("#general")
+
+
 
 newChatForm.addEventListener("submit", e=>{
     e.preventDefault();
@@ -42,9 +45,12 @@ rooms.addEventListener("click",e=>{
     }
 })
 
+const room = "general"
+document.querySelector(`#${room}`).classList.add("btn-on")
+
 const username = localStorage.getItem("username") ? localStorage.getItem("username") : "anonymous";
 
 const chatUI = new ChatUI(chatList)
-const chatroom = new Chatroom("music", username);
+const chatroom = new Chatroom(room, username);
 
 chatroom.getChats(data => chatUI.render(data));
