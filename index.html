@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Nanum+Gothic:wght@400;700&family=Varela+Round&display=swap" rel="stylesheet"></head>
+    <title>stringifly</title>
+<body>
+
+    <div class="wrapper">
+        <div class="navbar">
+            <h1 class="logo my-4"></h1>
+
+            <div class="chat-rooms text-center">
+                <button class="btn button" id="general">#general</button>
+                <button class="btn button" id="gaming">#gaming</button>
+                <button class="btn button" id="music">#music</button>
+                <button class="btn button" id="gossip">#gossip</button>
+                <button class="btn button" id="travel">#travel</button>
+            </div>
+        </div>
+        
+        <div class="chat-wrapper">
+            <div class="chat-window">
+                <ul class="chat-list list-group"></ul>
+            </div>
+            
+            <div class="forms">
+                <form class="new-name my-3">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="titles input-group-text">name</div>
+                        </div>
+                        <input type="text" id="name" class="form-control" required>
+                        <div class="input-group-append">
+                            <input type="submit" class="btn" value="save">
+                        </div>
+                    </div>
+                </form>
+
+                <form class="new-chat my-3">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="titles input-group-text">message</div>
+                        </div>
+                        <input type="text" id="message" class="form-control" required>
+                        <div class="input-group-append">
+                            <input type="submit" class="btn" value="send">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="update-message"></div>
+
+    </div>
+
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBnOkCNtXJ__ERxEp0EawZqD9MGuq1NLlQ",
+            authDomain: "project-pincir.firebaseapp.com",
+            projectId: "project-pincir",
+            storageBucket: "project-pincir.appspot.com",
+            messagingSenderId: "721060578422",
+            appId: "1:721060578422:web:4ad56466c9198410508b57"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore()
+    </script>
+    <script src="scripts/chat.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/app.js"></script>
+    
+</body>
+</html>

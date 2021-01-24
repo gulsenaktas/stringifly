@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    font-family: 'Comic Neue', cursive;
+}
+.navbar{
+    width: 35vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column ;
+    align-items: flex-start;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url(/chat_project/img/logo.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 30%;
+}
+.chat-rooms{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 50%;
+}
+.button{
+    background:  #52b788;
+    color: white;
+    outline: none ;
+    box-shadow: none;
+    width: 80%;
+}
+.btn{
+    background:  #52b788;
+    color: white;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.button::focus, .btn::focus{
+    outline: none !important;
+}
+.btn-on{
+    background-color: #2d6a4f;
+}
+.chat-wrapper{   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 6%;
+    padding-left: 3%;
+}
+.chat-window{
+    overflow-x:hidden;
+    margin-bottom: 3%;
+}
+.titles{
+    background-color: white;
+    color: #2d6a4f;
+    font-weight: bold;
+}
+.username{
+    font-weight: bold;
+    color: #2d6a4f;
+}
+.time{
+    font-size: 0.7em;
+    color: #999;
+}
+.update-message{
+    position: absolute;
+    bottom: 20vh;
+    left: 50vw;
+    text-align: center;
+    margin: auto ;
+}
