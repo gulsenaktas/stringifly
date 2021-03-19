@@ -1,9 +1,15 @@
 # Stringifly
 It's a real-time chat application.
 
+Choose your room, save your name, write your message and enjoy the chat.
+
 ![chat-app](./img/stringifly.png)
 
-Choose your room, save your name, write your message and enjoy the chat.
+## Mobil View
+
+![chat-app](./img/stringifly-mobil.png)
+
+
 
 # Used techniques
 
